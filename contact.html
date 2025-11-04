@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stick Shift Detailing - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 3rem;
+        }
+        .card {
+            background-color: #2c2c43;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 5px rgba(255, 255, 255, 0.05) inset;
+        }
+        .accent-color {
+            color: #0ea5e9;
+        }
+        .cta-button {
+            background-color: #0ea5e9;
+            transition: all 0.2s;
+            box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+        }
+        .cta-button:hover {
+            background-color: #0284c7;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.7);
+        }
+        .nav-link {
+            transition: color 0.2s;
+        }
+        .floating-contact-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .contact-modal {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 100;
+            display: none;
+        }
+    </style>
+</head>
+<body class="p-0">
+
+    <!-- Global Navigation Bar -->
+    <nav class="w-full bg-[#1a1a2e] bg-opacity-90 py-4 mb-8 sticky top-0 z-10 border-b border-sky-500/30">
+        <div class="max-w-4xl mx-auto flex justify-between items-center px-4">
+            <!-- Logo Link -->
+            <a href="index.html" class="flex items-center space-x-2 text-white text-2xl font-bold">
+                Stick Shift Detailing
+            </a>
+            <!-- Nav Links -->
+            <div class="space-x-6 text-sm font-semibold">
+                <a href="index.html" class="nav-link text-gray-400 hover:text-sky-400">Home</a>
+                <a href="stick_shift_detailing.html" class="nav-link text-gray-400 hover:text-sky-400">Packages</a>
+                <a href="about.html" class="nav-link text-gray-400 hover:text-sky-400">About Us</a>
+                <a href="testimonials.html" class="nav-link text-gray-400 hover:text-sky-400">Testimonials</a>
+                <a href="payments.html" class="nav-link text-gray-400 hover:text-sky-400">Payments</a>
+                <a href="gallery.html" class="nav-link text-gray-400 hover:text-sky-400">Gallery</a>
+                <a href="calendar.html" class="nav-link text-gray-400 hover:text-sky-400">Calendar</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Card - Centered and Responsive -->
+    <div id="app" class="card w-full max-w-4xl text-center rounded-3xl p-8 md:p-12 transition-all duration-300 mx-auto">
+        
+        <h1 class="text-4xl font-extrabold text-white mb-8 accent-color">Contact Us</h1>
+
+        <p class="text-xl text-gray-300 font-medium leading-relaxed mb-12">
+            Have questions or ready to book your detailing appointment? Reach out to us!
+        </p>
+
+        <div class="text-left text-gray-300 space-y-6 text-lg leading-relaxed max-w-lg mx-auto">
+            <p>
+                <strong>Phone:</strong> <a href="tel:+16562091221" class="accent-color hover:underline">(656) 209-1221</a>
+            </p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:stickshiftdetailing@gmail.com" class="accent-color hover:underline">stickshiftdetailing@gmail.com</a>
+            </p>
+            <p>
+                <strong>Address:</strong> 5077 Bromeliad Ave. Wimauma, FL 33598
+            </p>
+
+            <h2 class="text-3xl font-extrabold text-white accent-color mt-12 mb-6">Operational Hours</h2>
+            <div id="operational-hours"></div>
+
+            <h2 class="text-3xl font-extrabold text-white accent-color mt-12 mb-6">Send Us a Message</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-white text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#1a1a2e] border-sky-500/30 text-white" placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="email" class="block text-white text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#1a1a2e] border-sky-500/30 text-white" placeholder="your@example.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-white text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-[#1a1a2e] border-sky-500/30 text-white" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="cta-button py-3 px-8 text-lg font-bold rounded-full text-white shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-500/50">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1a1a2e] bg-opacity-90 py-8 mt-12 text-gray-400 text-center text-sm">
+        <p>&copy; 2025 Stick Shift Detailing. All rights reserved.</p>
+        <p class="mt-2">Designed with <span class="accent-color">&hearts;</span> by Nick Corbin</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const operationalHours = document.getElementById('operational-hours');
+
+            fetch('hours.json')
+                .then(response => response.json())
+                .then(data => {
+                    const hoursList = document.createElement('ul');
+                    hoursList.classList.add('list-disc', 'list-inside');
+                    for (const day in data.hours) {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${day}: ${data.hours[day]}`;
+                        hoursList.appendChild(listItem);
+                    }
+                    operationalHours.appendChild(hoursList);
+                });
+        });
+    </script>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact-btn">
+        <button id="contact-us-btn" class="cta-button py-3 px-6 text-lg font-bold rounded-full text-white shadow-xl focus:outline-none focus:ring-4 focus:ring-sky-500/50">
+            Contact Us
+        </button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="contact-modal card w-full max-w-sm text-left rounded-3xl p-6 transition-all duration-300">
+        <h3 class="text-2xl font-bold text-white accent-color mb-4">Contact Information</h3>
+        <p class="text-gray-300"><strong>Name:</strong> Stick Shift Detailing</p>
+        <p class="text-gray-300"><strong>Email:</strong> <a href="mailto:stickshiftdetailing@gmail.com" class="accent-color hover:underline">stickshiftdetailing@gmail.com</a></p>
+        <p class="text-gray-300"><strong>Phone:</strong> <a href="tel:+16562091221" class="accent-color hover:underline">(656) 209-1221</a></p>
+        <div class="mt-4">
+            <h4 class="text-xl font-bold text-white accent-color mb-2">Hours of Operation</h4>
+            <ul class="text-gray-300 list-disc list-inside">
+                <li>Monday: 9:00 AM - 5:00 PM</li>
+                <li>Tuesday: 9:00 AM - 5:00 PM</li>
+                <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                <li>Thursday: 9:00 AM - 5:00 PM</li>
+                <li>Friday: 9:00 AM - 5:00 PM</li>
+                <li>Saturday: 10:00 AM - 2:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+        <div class="mt-4 flex space-x-4">
+            <a href="https://www.facebook.com/stickshiftdetailing" target="_blank" class="text-gray-400 hover:text-sky-400">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+            </a>
+            <a href="https://www.instagram.com/stickshiftdetailing" target="_blank" class="text-gray-400 hover:text-sky-400">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.013 0-4.483.017-6.053.088-1.57.072-2.648.36-3.588.818a4.893 4.893 0 00-1.75 1.75c-.458.94-.746 2.018-.818 3.588C.017 7.832 0 8.302 0 12.315s.017 4.483.088 6.053c.072 1.57.36 2.648.818 3.588a4.893 4.893 0 001.75 1.75c.94.458 2.018.746 3.588.818 1.57.071 2.04.088 6.053.088s4.483-.017 6.053-.088c1.57-.072 2.648-.36 3.588-.818a4.893 4.893 0 001.75-1.75c.458-.94.746-2.018.818-3.588.071-1.57.088-2.04.088-6.053s-.017-4.483-.088-6.053c-.072-1.57-.36-2.648-.818-3.588a4.893 4.893 0 00-1.75-1.75c-.94-.458-2.018-.746-3.588-.818C16.798 2.017 16.328 2 12.315 2zm0 1.802c3.938 0 4.38.016 5.917.085 1.4.063 2.21.333 2.812.575a3.09 3.09 0 011.126 1.126c.242.602.512 1.412.575 2.812.069 1.537.085 1.979.085 5.917s-.016 4.38-.085 5.917c-.063 1.4-.333 2.21-.575 2.812a3.09 3.09 0 01-1.126 1.126c-.602.242-1.412.512-2.812.575-1.537.069-1.979.085-5.917.085s-4.38-.016-5.917-.085c-1.4-.063-2.21-.333-2.812-.575a3.09 3.09 0 01-1.126-1.126c-.242-.602-.512-1.412-.575-2.812C2.198 16.798 2.182 16.356 2.182 12.315s.016-4.38.085-5.917c.063-1.4.333-2.21.575-2.812a3.09 3.09 0 011.126-1.126c.602-.242 1.412-.512 2.812-.575C7.935 3.818 8.377 3.802 12.315 3.802zM12 7.31a5 5 0 100 10 5 5 0 000-10zm0 8.198a3.198 3.198 0 110-6.396 3.198 3.198 0 010 6.396zM18.438 7.31a1.438 1.438 0 11-2.876 0 1.438 1.438 0 012.876 0z" clip-rule="evenodd" /></svg>
+            </a>
+        </div>
+        <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
+    </div>
+
+    <script>
+        const contactUsBtn = document.getElementById('contact-us-btn');
+        const contactModal = document.getElementById('contact-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        contactUsBtn.addEventListener('click', () => {
+            if (contactModal.style.display === 'block') {
+                contactModal.style.display = 'none';
+            } else {
+                contactModal.style.display = 'block';
+            }
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            contactModal.style.display = 'none';
+        });
+
+        // Close modal if clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target !== contactModal && !contactModal.contains(event.target) && event.target !== contactUsBtn && !contactUsBtn.contains(event.target)) {
+                contactModal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
